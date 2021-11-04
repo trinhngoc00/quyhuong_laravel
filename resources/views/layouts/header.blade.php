@@ -33,22 +33,23 @@
 							<a class="nav-link" href="{{ route('product') }}">sản phẩm</a>
 							<div class="wrapper-submenu">
 								<ul>
-									
+								@foreach($all_type as $row)
+								<li class="nav-item">
+									<a href="{{ url('typeProduct', $row->id) }}" class="nav-link">{{$row->name}}</a>
+								</li>
+								@endforeach
 								</ul>
 							</div>
 						</li>
 
 						<li class="nav-item">
-							<a class="nav-link" href="type_product.php?id=1" >Bánh gato</a>
-						</li>
-						<!-- <li class="nav-item">
-							<a class="nav-link" href="type_product.php?id=5">Bánh ngọt</a>
-						</li> -->
-						<li class="nav-item">
-							<a class="nav-link" href="type_product.php?id=7">Bánh miếng nhỏ</a>
+							<a class="nav-link" href="{{ url('typeProduct/1') }}" >Bánh gato</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="type_product.php?id=9" >Bánh sự kiện</a>
+							<a class="nav-link" href="{{ url('typeProduct/7') }}">Bánh miếng nhỏ</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="{{ url('typeProduct/9') }}" >Bánh sự kiện</a>
 						</li>
 
 						<?php if (isset($_SESSION['username']) && $_SESSION['username']): ?>
@@ -84,9 +85,10 @@
 						</ul>
 
 						<div class="form-search">
-							<form method="post" action="search.php">
-								<input type="text" name="search" placeholder="Search" value="socola">
-								<input type="submit" name="submit_search" value="Tìm"><i class="fa fa-search"></i>
+							<form method="post" action="{{url('search')}}">
+							{{csrf_field()}}
+								<input type="text" name="keyword" placeholder="Search" value="socola">
+								<button type="submit" name="submit_search" value="Tìm"><i class="fa fa-search"></i></button>
 							</form>
 						</div>
 					</div>

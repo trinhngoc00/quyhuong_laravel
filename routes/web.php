@@ -22,4 +22,6 @@ Route::get('/product/{id}', 'App\Http\Controllers\PagesController@getProductDeta
 Route::get('/login', 'App\Http\Controllers\Auth\LoginController@getLogin')->name("login");
 //Route::post('/login', 'PagesController@postLogin');
 
-//Route::post('/search', 'PagesController@postSearch');
+Route::post('/search', 'App\Http\Controllers\PagesController@postSearch');
+
+Route::get('/typeProduct/{id}', 'App\Http\Controllers\PagesController@getTypeProduct')->name("typeProduct");
