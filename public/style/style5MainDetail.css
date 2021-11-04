@@ -1,0 +1,46 @@
+
+.treatment {
+	margin-top: 25px;
+	margin-bottom: 50px;
+}
+.treatment .col-12{
+	padding:1px;
+}
+.treatment-content{
+	margin: auto 0;
+}
+.card_treatment{
+	text-align: center;
+	background-color: rgb(237 233 233);
+	border: 0;
+	margin: auto;
+	padding: 50px 0px;
+}
+.card_treatment i{
+	font-size: 40px;
+}
+.card_treatment .card-body{
+	display: flex;
+	justify-content: center;
+}
+.card_treatment .card-title{
+	font-size: 16px;
+	
+}
+.card_treatment .card-text{
+	color: #999;
+	font-size: 16px;
+}
+.treatment-icon{
+	margin-right: 20px;
+}
+.treatment .col-sm-6{
+	margin: auto;
+}
+@media (max-width: 1380px) and (min-width: 1200px ){
+	.treatment .col-xl-3{
+		flex: 0 0 50%;
+		max-width: 50%;
+		margin: auto;
+	}
+}

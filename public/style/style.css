@@ -1,0 +1,184 @@
+.name-title{
+	font-size: 18px; 
+	font-family: 'Coiny',sans-serif; 
+	color: #f1e749;
+	height: 100%;
+	line-height: 100%;
+	margin: auto;
+	white-space: nowrap;
+}
+.link-head:hover{
+	text-decoration: none;
+}
+
+
+.treatment {
+	margin-top: 25px;
+	margin-bottom: 50px;
+}
+.treatment .col-12{
+	padding:1px;
+}
+.treatment-content{
+	margin: auto 0;
+}
+.card_treatment{
+	text-align: center;
+	background-color: rgb(237 233 233);
+	border: 0;
+	margin: auto;
+	padding: 50px 0px;
+}
+.card_treatment i{
+	font-size: 40px;
+}
+.card_treatment .card-body{
+	display: flex;
+	justify-content: center;
+}
+.card_treatment .card-title{
+	font-size: 16px;
+	
+}
+.card_treatment .card-text{
+	color: #999;
+	font-size: 16px;
+}
+.treatment-icon{
+	margin-right: 20px;
+}
+.treatment .col-sm-6{
+	margin: auto;
+}
+@media (max-width: 1380px) and (min-width: 1200px ){
+	.treatment .col-xl-3{
+		flex: 0 0 50%;
+		max-width: 50%;
+		margin: auto;
+	}
+}
+
+.link-footer{
+	color: #fff;
+	text-transform: uppercase;
+	transition: all 0.3s;
+}
+.link-footer:hover{
+	color: #f1e749;
+	text-decoration: none;
+}
+
+.btn-sale{
+	position: absolute;
+	top: 20px;
+	right: 0; 
+	background-color: #d2691e;
+	color: #fff;
+	padding: 5px 10px;
+}
+.two-deal img{
+	margin-top: 20px;
+	max-height: 200px;
+	object-fit: cover;
+}
+.carousel-caption{
+	position: unset;
+	color: #333;
+}
+.carousel-caption h5{
+	font-size: 16px;
+	font-weight: bold;
+}
+.carousel-caption p{
+	font-size: 14px;
+}
+.see-more{
+	font-size: 14px;
+}
+.see-more:hover{
+	color: #f1e749;
+}
+.see-more.white{
+	color: #fff;
+}
+.see-more.black{
+	color: #333;
+}
+.input_btn{
+	width: auto;
+}
+.formLogin tr, .formLogin td{
+	border: none !important;
+}
+.input_info{
+	width: 300px;
+}
+@media (max-width: 767px) {
+	.img_right{
+		display: none;
+	}
+}
+a.item_type_pr{
+	font-size: 14px;
+	color: #fff;
+	margin-bottom: 5px;
+}
+.wrapper-submenu li{
+	border-bottom: 1px solid #595050;
+	padding-bottom: 5px;
+}
+
+/*admin*/
+.ad_head{
+	border-bottom: 1px solid #bebebe;
+	background: #4b221c;
+}
+.ad_head .nav-link{
+	font-size: 16px;
+	color: #fff;
+}
+.ad_head .nav-item{
+	padding: 5px;
+	border-right: 1px solid #897e7e;
+}
+.agree_delete{
+	display: none;
+}
+.ad_menu{
+	background: #4b221c;
+	min-height: 100vh;
+}
+.ad_menu .nav-link{
+	font-size: 16px;
+	color: #fff;
+}
+.ad_menu .nav-item{
+	padding: 5px;
+	border-bottom: 1px solid #897e7e;
+}
+.ad_menu .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+	background: chocolate;
+}
+.ad_conntent .form_search{
+	display: inline-block;
+	padding-right: 20px;
+}
+.add_to_cart{
+	background-color: #7fb06f;
+	border-color: #7fb06f;
+}
+.row_box p.card-text{
+	font-size: 14px;
+}
+.btn_modal, .btn_modal:hover{
+	background-color: chocolate;
+	border-color: chocolate;
+}
+.btn_modal.active, .btn_modal:active, .btn_modal.focus,.btn_modal:focus{
+	background-color: chocolate;
+	border-color: chocolate;
+	box-shadow: 0 0 0 0.2rem rgb(238 161 112 / 50%);
+}
+.message_alert{
+	font-size: 14px;
+}
