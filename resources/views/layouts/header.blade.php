@@ -1,10 +1,9 @@
 <div class="container">
-	@if(Session::has('success'))
+	@if(Session::has('name'))
 	<p align="right" style="margin-bottom: 0;">
-
-		Tên người dùng: {{ Session::get('success') }}
-
-		<a class="" href="logout.php" style="margin-left: 20px;">Đăng xuất</a>
+		Tên người dùng: 
+		{{ Session::get('name') }}
+		<a class="" href="{{ route('logout') }}" style="margin-left: 20px;">Đăng xuất</a>
 	</p>
 
 	@else
@@ -56,15 +55,14 @@
 						<a class="nav-link" href="{{ url('typeProduct/9') }}">Bánh sự kiện</a>
 					</li>
 
-					<?php if (isset($_SESSION['username']) && $_SESSION['username']) : ?>
-					<?php else : ?>
+					@if(!Session::has('name'))
 						<li class="nav-item">
 							<a class="nav-link" href="{{ route('login') }}">Đăng nhập</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="resgister.php">Đăng kí</a>
 						</li>
-					<?php endif; ?>
+					@endif
 
 					<?php if (isset($_SESSION['permission']) && $_SESSION['permission'] == 10) { ?>
 						<li class="nav-item">

@@ -19,9 +19,18 @@ Route::get('/product', 'App\Http\Controllers\PagesController@getProduct')->name(
 
 Route::get('/product/{id}', 'App\Http\Controllers\PagesController@getProductDetail');
 
-Route::get('/login', 'App\Http\Controllers\PagesController@getLogin')->name("login");
-Route::post('/login', 'App\Http\Controllers\PagesController@postLogin');
+// Route::get('/login', 'App\Http\Controllers\PagesController@getLogin')->name("login");
+// Route::post('/login', 'App\Http\Controllers\PagesController@postLogin');
+
+// Route::get('/logout', 'App\Http\Controllers\PagesController@getLogout')->name("logout");
+
+Route::get('/login', 'App\Http\Controllers\Auth\LoginController@getLogin')->name("login");
+Route::post('/login', 'App\Http\Controllers\Auth\LoginController@postLogin');
+Route::get('/logout', 'App\Http\Controllers\Auth\LoginController@getLogout')->name("logout");
 
 Route::post('/search', 'App\Http\Controllers\PagesController@postSearch');
 
 Route::get('/typeProduct/{id}', 'App\Http\Controllers\PagesController@getTypeProduct')->name("typeProduct");
+
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

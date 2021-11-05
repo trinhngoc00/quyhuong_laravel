@@ -26,9 +26,10 @@ class PagesController extends Controller
 
 	public function getLogout(Request $request)
 	{
+		$all_type = ProductType::all();
 		Auth::logout();
 
-		return view('pages.login');
+		return view('pages.login', compact('all_type'));
 	}
 
 	public function postLogin(Request $request)
@@ -40,6 +41,7 @@ class PagesController extends Controller
 
 			$find = Customer::where('username', '=', $user)->where('password', '=', $pass)->count();
 			if ($find > 0) {
+				session()->put('name', $user);
 				session()->flash('success', $user);
 				return redirect('');
 			} else	{
