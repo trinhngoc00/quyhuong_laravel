@@ -19,8 +19,8 @@ Route::get('/product', 'App\Http\Controllers\PagesController@getProduct')->name(
 
 Route::get('/product/{id}', 'App\Http\Controllers\PagesController@getProductDetail');
 
-Route::get('/login', 'App\Http\Controllers\Auth\LoginController@getLogin')->name("login");
-//Route::post('/login', 'PagesController@postLogin');
+Route::get('/login', 'App\Http\Controllers\PagesController@getLogin')->name("login");
+Route::post('/login', 'App\Http\Controllers\PagesController@postLogin');
 
 Route::post('/search', 'App\Http\Controllers\PagesController@postSearch');
 
